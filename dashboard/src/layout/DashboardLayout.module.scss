@@ -1,0 +1,52 @@
+.dashboardlayout {
+  height: 100%;
+}
+
+.logo_img {
+  width: 48px;
+  height: 48px;
+}
+
+.logo_container {
+  height: 64px;
+  display: flex;
+  flex: 3;
+  align-items: center;
+}
+
+.header {
+  display: flex;
+}
+
+.header_title {
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+.select_container {
+  height: 100%;
+  margin-left: 30px;
+}
+
+.select {
+  min-width: 150px;
+}
+
+.avatar_container {
+  flex-direction: row-reverse;
+  display: flex;
+  flex: 1;
+  align-items: center;
+}
+
+.select_title {
+  color: #fff;
+}
+
+.avatar_content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
