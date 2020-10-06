@@ -26,6 +26,8 @@ const Index = () => {
                 <Descriptions.Item label="avaiable storage" span={1} >{item.status?.allocatable ? item.status.allocatable['ephemeral-storage'] : ''}</Descriptions.Item>
                 <Descriptions.Item label="total memory" span={1} >{item.status?.capacity ? item.status.capacity['memory'] : ''}</Descriptions.Item>
                 <Descriptions.Item label="avaiable memory" span={1} >{item.status?.allocatable ? item.status.allocatable['memory'] : ''}</Descriptions.Item>
+                <Descriptions.Item label="total GPU" span={1} >{item.status?.capacity ? item.status.capacity['nvidia.com/gpu'] : ''}</Descriptions.Item>
+                <Descriptions.Item label="avaiable GPU" span={1} >{item.status?.allocatable ? item.status.allocatable['nvidia.com/gpu'] : ''}</Descriptions.Item>
               </React.Fragment>
             )) : ''
           }
@@ -33,6 +35,6 @@ const Index = () => {
       </div>
     );
   });
-}
+};
 
 export default Index;

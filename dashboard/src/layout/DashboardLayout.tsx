@@ -12,6 +12,7 @@ import { Route, RouteComponentProps } from 'react-router-dom';
 import { useObserver } from 'mobx-react';
 import styles from './DashboardLayout.module.scss';
 import Dashboard from '../pages/Dashboard';
+import Notebook from '../pages/Notebook';
 
 const { Header, Content, Sider } = Layout;
 
@@ -23,7 +24,7 @@ const DashboardLayout: React.SFC<ChildComponentProps> = ({ history }) => {
 
   const menuKeyPathMapping: {[key:string]:string} = {
     "1": "/",
-    "2": "/jupyter_notebooks",
+    "2": "/notebook",
   };
 
   const onSidecarMenuClick = (e: MenuInfo) => {
@@ -75,6 +76,7 @@ const DashboardLayout: React.SFC<ChildComponentProps> = ({ history }) => {
               }}
             >
               <Route path="/" component={Dashboard} exact />
+              <Route path="/notebook" component={Notebook} />
             </Content>
           </Layout>
         </Layout>

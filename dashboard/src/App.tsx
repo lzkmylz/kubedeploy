@@ -14,6 +14,7 @@ function App() {
       <Router>
         <Switch>
           <Route path="/" component={DashboardLayout} exact />
+          <Route path="/notebook" component={DashboardLayout} />
           <Route component={NotFound} />
         </Switch>
       </Router>
