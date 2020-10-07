@@ -1,5 +1,6 @@
 import React from 'react';
 import { Table, Tag, Space } from 'antd';
+import { Resource } from '../../types';
 
 const NotebookTable = () => {
   const tagColorMap : {[key: string]: string} = {
@@ -66,39 +67,39 @@ const NotebookTable = () => {
     },
   ];
   
-  const data = [
+  const data : Resource[] = [
     {
-      key: '1',
       name: 'John Brown',
-      age: 32,
+      age: '32',
       image: 'New York No. 1 Lake Park',
-      gpu: 0,
-      cpu: 0,
+      gpu: '0',
+      cpu: '0',
       memory: "512Mb",
       volumes: ["volume-1", "volume-2"],
       status: "pending",
+      reason: '',
     },
     {
-      key: '2',
       name: 'Jim Green',
-      age: 42,
+      age: '42',
       image: 'London No. 1 Lake Park',
-      gpu: 0,
-      cpu: 0,
+      gpu: '0',
+      cpu: '0',
       memory: "512Mb",
       volumes: ["volume-1", "volume-2"],
       status: "failed",
+      reason: '',
     },
     {
-      key: '3',
       name: 'Joe Black',
-      age: 32,
+      age: '32',
       image: 'Sidney No. 1 Lake Park',
-      gpu: 0,
-      cpu: 0,
+      gpu: '0',
+      cpu: '0',
       memory: "512Mb",
       volumes: ["volume-1", "volume-2"],
       status: "success",
+      reason: '',
     },
   ];
 
