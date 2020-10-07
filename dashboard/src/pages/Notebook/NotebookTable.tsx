@@ -48,8 +48,8 @@ const NotebookTable = () => {
       render: (volumes : [string]) => (
         <Space size="middle" >
           {
-            volumes.map((volume) => (
-              <span>{volume}</span>
+            volumes.map((volume, ind) => (
+              <span key={ind} >{volume}</span>
             ))
           }
         </Space>
@@ -69,6 +69,7 @@ const NotebookTable = () => {
   
   const data : Resource[] = [
     {
+      key: '1',
       name: 'John Brown',
       age: '32',
       image: 'New York No. 1 Lake Park',
@@ -80,6 +81,7 @@ const NotebookTable = () => {
       reason: '',
     },
     {
+      key: '2',
       name: 'Jim Green',
       age: '42',
       image: 'London No. 1 Lake Park',
@@ -91,6 +93,7 @@ const NotebookTable = () => {
       reason: '',
     },
     {
+      key: '3',
       name: 'Joe Black',
       age: '32',
       image: 'Sidney No. 1 Lake Park',

@@ -20,11 +20,16 @@ interface ChildComponentProps extends RouteComponentProps<any> {
   /* other props for ChildComponent */
 }
 
-const DashboardLayout: React.SFC<ChildComponentProps> = ({ history }) => {
+const DashboardLayout: React.SFC<ChildComponentProps> = ({ history, location }) => {
 
   const menuKeyPathMapping: {[key:string]:string} = {
     "1": "/",
     "2": "/notebook",
+  };
+
+  const PathMapToMenuKey: {[path:string]:string} = {
+    "/": "1",
+    "/notebook": "2"
   };
 
   const onSidecarMenuClick = (e: MenuInfo) => {
@@ -53,7 +58,7 @@ const DashboardLayout: React.SFC<ChildComponentProps> = ({ history }) => {
           >
             <Menu
               mode="inline"
-              defaultSelectedKeys={['1']}
+              defaultSelectedKeys={[PathMapToMenuKey[location.pathname]]}
               defaultOpenKeys={['sub1']}
               style={{ height: '100%', borderRight: 0 }}
               onClick={onSidecarMenuClick}

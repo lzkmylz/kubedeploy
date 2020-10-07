@@ -1,5 +1,6 @@
 // Notebooks received from backend
 export interface Resource {
+  key: string;
   name: string;
   status: string;
   reason: string;
